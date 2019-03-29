@@ -107,7 +107,7 @@ for (i = 0; i < buddies.length; i++){
 // Chapter 6
 // ============
 const leaveTheShire = () => {
-
+$(`ul.hobbit`).appendTo(`#Rivendell`)
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
 
   // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
