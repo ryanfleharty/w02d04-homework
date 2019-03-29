@@ -238,6 +238,11 @@ $('.buddies').eq(0).addClass("the-white");
 const hornOfGondor = () => {
 
   // 1. create a pop-up alert that the horn of gondor has been blown
+  window.alert('The horn of gondor has been blown!');
+
+  $('.buddy').eq(4).css('text-decoration: line-through');
+
+  $('.baddies').eq(2).remove();
 
   // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
 
