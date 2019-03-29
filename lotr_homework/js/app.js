@@ -70,6 +70,7 @@ const makeHobbits = () => {
 const keepItSecretKeepItSafe = () => {
   $(`body`).append(`<div id="the-ring"/>`)
   $("li").get(0).append(`#the-ring`);
+  
 };
 
 // COMMIT YOUR WORK
@@ -179,12 +180,11 @@ const itsDangerousToGoAlone = () => {
 // Chapter 12
 // ============
 const weWantsIt = () => {
+  $(`#Mordor`).append(`<div id = "gollum"/>`);
 
-  // 1. Create a div with an id of 'gollum' and add it to Mordor
+  $(`#the-ring`).appendTo(`#gollum`);
 
-  // 2. Move the ring from Frodo and give it to Gollum
-
-  // 3. Move Gollum into Mount Doom
+  $(`#gollum`).appendTo(`#mount-doom`);
 
 };
 
