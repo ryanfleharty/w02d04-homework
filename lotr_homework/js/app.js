@@ -123,16 +123,11 @@ $('.hobbit').eq(0).append('<div id="the-ring"></div>');
 const makeBaddies = () => {
 
   // 1. display an unordered list of baddies in Mordor
-  const $ul2 = ('<ul/>');
-  $('#Mordor').append($ul2);
+  $('#Mordor').append('<ul></ul>');
 
-  for (let i = 0; i < baddies.length; i++){
-    const $li = ('<li class="baddy"/>');
 
-   $($ul2).append($li + baddies[i]);
-   $('#Mordor').append($li);
-
-   console.log($li);
+  for (let i = 0; i < hobbits.length; i++){
+    $('ul').append('<li class = "baddy">' + baddies[i] + '</li>');
   }
   // 2. give each of the baddies a class of "baddy"
 
