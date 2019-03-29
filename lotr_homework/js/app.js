@@ -73,8 +73,8 @@ for (i=0;i<lands.length;i++){
 // ============
 const makeHobbits = () => {
   $('#The-Shire').append("<ul class='hobbit'></ul>");
-  for (i = 0; i < lands.length; i++) {
-    $('.hobbit').append(`<li class="hobbit">${hobbits[i]}</li>`);
+  for (i = 0; i < hobbits.length; i++) {
+    $('ul').append(`<li class="hobbit">${hobbits[i]}</li>`);
   }
   console.log('Make hobbits');
 
@@ -97,6 +97,7 @@ const makeHobbits = () => {
 const keepItSecretKeepItSafe = () => {
 
   // 1. create an empty div with an id of 'the-ring'
+  $('li:first').append("<div id='the-ring'></div>");
 
   // 2. add the ring as a child of Frodo
 
