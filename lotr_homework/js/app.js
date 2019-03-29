@@ -249,10 +249,13 @@ const itsDangerousToGoAlone = () => {
 const weWantsIt = () => {
 
   // 1. Create a div with an id of 'gollum' and add it to Mordor
-
+  const $divGollum = $('<div/>', { class: 'gollum' });
+   $('#Mordor').append($divGollum);
   // 2. Move the ring from Frodo and give it to Gollum
-
+  const $divRing = $('#the-ring');
+  $divGollum.append($divRing);
   // 3. Move Gollum into Mount Doom
+  $("div:contains('moount-doom')").append($divGollum);
 
 };
 
