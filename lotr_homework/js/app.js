@@ -49,11 +49,11 @@ const makeMiddleEarth = () => {
   // 1. create a section tag with an id of middle-earth
   
   // 2. append the section to the body of the DOM.
-$("body").append('<section id = middle-earth ></section>');
+$("body").append('<section id= middle-earth></section>');
 
   // 3. use a for loop to iterate over the lands array that does the following:
 for (i=0;i<lands.length;i++){
-  $('#middle-earth').append(`<article id =${lands[i]}><h1>${lands[i]}</h1></article>`)
+  $('#middle-earth').append(`<article id= ${lands[i]}><h1>${lands[i]}</h1></article>`)
 }
   //   3a. creates an article tag (there should be one for each land when the loop is done)
 
@@ -138,9 +138,11 @@ const makeBuddies = () => {
   // 2. display an unordered list of buddies in the aside
 
   // 3. give each of the buddies a class of "buddy"
-$('#Mordor').append("<aside class='buddy'></aside>");
+$('#Mordor').append("<aside></aside>")
+$('aside').append("<ul class = 'buddy'></ul>");
 for (i = 0; i < buddies.length; i++) {
-  $('#Mordor').append(`<li class="buddy">${buddies[i]}</li>`);
+
+  ('ul').append(`<li class="buddy">${buddies[i]}</li>`);
 }}
 
 // COMMIT YOUR WORK
@@ -154,7 +156,7 @@ const leaveTheShire = () => {
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
 
   // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
-$('.hobbit').detach('#The-Shire').append('#Rivendell').childre('ul')
+$('.hobbit').detach('#The-Shire').append('#Rivendell').each('ul')
 };
 
 // COMMIT YOUR WORK
@@ -166,7 +168,7 @@ $('.hobbit').detach('#The-Shire').append('#Rivendell').childre('ul')
 const beautifulStranger = () => {
 
   // 1. change the buddy 'Strider' textnode to "Aragorn"
-
+  $('aside').children('ul').find('li').text('Aragorn')
   // hint: You can get a list of elements by tag name, such as 'aside'
 
 };
