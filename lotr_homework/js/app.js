@@ -202,7 +202,14 @@ const forgeTheFellowShip = () => {
 const theBalrog = () => {
 
   // 1. change the 'Gandalf' textNode to 'Gandalf the White'
-
+  $('.buddy').each(function(){
+    console.log(this.innerText);
+  if (this.innerText === "gandalf") {
+    console.log("Inside gandalf!!");
+    $(this).text('Gandalf the White');
+    $(this).addClass("the-white");
+  }
+  })
   // 2. add a class "the-white" to this element
 
   // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
