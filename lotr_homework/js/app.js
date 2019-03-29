@@ -220,6 +220,8 @@ const forgeTheFellowShip = () => {
 const theBalrog = () => {
 
   // 1. change the 'Gandalf' textNode to 'Gandalf the White'
+$('.buddies').eq(0).text('Gandalf the White');
+$('.buddies').eq(0).addClass("the-white");
 
   // 2. add a class "the-white" to this element
 
