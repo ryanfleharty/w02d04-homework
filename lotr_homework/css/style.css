@@ -210,3 +210,8 @@ aside ul {
   }
 
 }
+
+.the-white {
+  background: white;
+  border: grey; 
+}
