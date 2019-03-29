@@ -1,36 +1,36 @@
-console.log("LOTR homework js file is connected");
+console.log('LOTR homework js file is connected');
 console.log("HINT: Click on the 'Elements' tab to see the elements that you are creating");
-console.log("---------------")
+console.log('---------------')
 // ==============================
 //       Dramatis Personae
 // ==============================
 
 const hobbits = [
-  "Frodo Baggins",
+  'Frodo Baggins',
   "Samwise 'Sam' Gamgee",
   "Meriadoc 'Merry' Brandybuck",
   "Peregrin 'Pippin' Took"
 ];
 
 const buddies = [
-  "Gandalf the Grey",
-  "Legolas",
-  "Gimli",
-  "Strider",
-  "Boromir"
+  'Gandalf the Grey',
+  'Legolas',
+  'Gimli',
+  'Strider',
+  'Boromir'
 ];
 
 const baddies = [
-  "Sauron",
-  "Saruman",
-  "The Uruk-hai",
-  "Orcs"
+  'Sauron',
+  'Saruman',
+  'The Uruk-hai',
+  'Orcs'
 ];
 
 const lands = [
-  "The-Shire",
-  "Rivendell",
-  "Mordor"
+  'The-Shire',
+  'Rivendell',
+  'Mordor'
 ];
 
 // ====================================
@@ -44,7 +44,7 @@ const makeMiddleEarth = () => {
 
   // HINT: Make a console.log for each of your functions to make sure that, when you click, the correct function is being called!
 
-  console.log("Trying to make middle earth.");
+  console.log('Trying to make middle earth.');
 
   // 1. create a section tag with an id of middle-earth
   const $section = $('<section/>', { id: 'middle-earth' });
@@ -218,11 +218,11 @@ const theBalrog = () => {
 const hornOfGondor = () => {
 
   // 1. create a pop-up alert that the horn of gondor has been blown
-
+  alert('The horn of gondor has been blown!');
   // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
-
+  $("li:contains('Boromir')").css('text-decoration', 'line-through');
   // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
-
+  $("li:contains('The Uruk-hai')").remove();
 };
 
 // COMMIT YOUR WORK
