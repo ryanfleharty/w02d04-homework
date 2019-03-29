@@ -51,8 +51,7 @@ const makeMiddleEarth = () => {
   // 3. use a for loop to iterate over the lands array that does the following:
   for(let i = 0; i < lands.length; i++) {
     $('#middle-earth').append('<article id= "cat"></article>');
-    $('#cat').append('<h1 id="landsh1"></h1>');
-    $('#landsh1').text(lands[i]);
+    $('#cat').append('<h1>"' + lands[i] + '"</h1>');
     $('#cat').attr('id', lands[i]);
   }
   //   3a. creates an article tag (there should be one for each land when the loop is done)
@@ -75,19 +74,20 @@ makeMiddleEarth();
 const makeHobbits = () => {
 
   console.log('Make hobbits');
-
-  // 1. display an unordered list of the hobbits in the shire.
-  const $hobbitList = $('<ul><ul/>');
+  //Okay, so I need to append this to the Shire. It's an unordered list.
+  $('#The-Shire').append('<ul id="hobbitList"></ul>');
   for (let i = 0; i < hobbits.length; i++) {
-    hobbits[i]
+    $('#hobbitList').append('<li class="hobbitses">"' + hobbits[i] + '"</li>');
   }
   // 2. give each hobbit a class of "hobbit"
-  $hobbitList.append()
+
   // hint: create a 'ul' outside the loop upon which to append the 'li's
 
   // hint: get 'The-Shire' by using its id
 
 };
+
+makeHobbits();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
