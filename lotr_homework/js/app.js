@@ -181,10 +181,8 @@ $("#Rivendell").append("The-Shire");
 const beautifulStranger = () => {
 
   // 1. change the buddy 'Strider' textnode to "Aragorn"
-  //Not working. I'm honestly very confused and don't know if I'm doing any of these things correctly. I'm not seeing anything on my console/in browser.
 
-  const $newAside = $('<aside>').eq(3).append('Aragorn');
-  console.log($newAside);
+$('.buddy').eq(3).append('Aragorn');
 
 
   // hint: You can get a list of elements by tag name, such as 'aside'
