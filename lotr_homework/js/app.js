@@ -206,11 +206,11 @@ $('#the-fellowship').append(bestBuds);
 const theBalrog = () => {
 
   // 1. change the 'Gandalf' textNode to 'Gandalf the White'
-
+  let prettyFly = $('.buddy:first-of-type');
+  $(prettyFly).text('Gandalf the White');
   // 2. add a class "the-white" to this element
-
+  $(prettyFly).attr('class', 'the-white')
   // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
-
 };
 
 // COMMIT YOUR WORK
