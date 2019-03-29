@@ -85,6 +85,7 @@ const makeHobbits = () => {
       let thisHobbit = hobbits[i];
       $('#The-Shire ul').append('<li></li>');
       $('li:last-child').attr('class', thisHobbit);
+      $('li:last-child').text(thisHobbit);
     }
 };
 
@@ -111,12 +112,16 @@ $('.Frodo').append('<div id="the-ring"></div>')
 // Chapter 4
 // ============
 const makeBaddies = () => {
-
   // 1. display an unordered list of baddies in Mordor
-
   // 2. give each of the baddies a class of "baddy"
-
   // 3. remember to append them to Mordor
+  $('#Mordor').append('<ul/>');
+  for (let i = 0; i < baddies.length; i++){
+    $('#Mordor ul').append('<li/>');
+    $('#Mordor li').attr('class', 'baddy');
+    let thisBaddy = baddies[i];
+    $('#Mordor li:last-child').text(thisBaddy);
+  }
 };
 
 // COMMIT YOUR WORK
