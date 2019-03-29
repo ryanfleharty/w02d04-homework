@@ -4,6 +4,13 @@ console.log("---------------")
 // ==============================
 //       Dramatis Personae
 // ==============================
+// jQuery as three steps
+
+//1. pick a thing in HTML to change
+
+//2. decide what to do with it
+
+//3. provide the necessary info in the parentheses
 
 const hobbits = [
   "Frodo Baggins",
@@ -49,9 +56,9 @@ const makeMiddleEarth = () => {
   // 1. create a section tag with an id of middle-earth
 
   // 2. append the section to the body of the DOM.
-
+  $('body').append('<section id=" middle-earth"></section>')
   // 3. use a for loop to iterate over the lands array that does the following:
-
+       for (i = 0; i < lands.length; i++) {
   //   3a. creates an article tag (there should be one for each land when the loop is done)
 
   //   3b. gives each land article an `id` tag of the corresponding land name
@@ -59,8 +66,10 @@ const makeMiddleEarth = () => {
   //   3c. includes an h1 with the name of the land inside each land article
 
   //   3d. appends each land to the middle-earth section
-
+    $('#middle-earth').append(`<article id="${lands[i]}"><h1>${lands[i]}</h1></article>`)
+  }
 };
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
@@ -73,9 +82,11 @@ const makeHobbits = () => {
   console.log('Make hobbits');
 
   // 1. display an unordered list of the hobbits in the shire.
-
+ $('#the-shire').append('<ul></ul>')
   // 2. give each hobbit a class of "hobbit"
-
+for (i = 0; i < hobbits.length; i++) {
+  $("ul").append(`<li class="hobbit">${hobbit}</li>`);
+}
   // hint: create a 'ul' outside the loop upon which to append the 'li's
 
   // hint: get 'The-Shire' by using its id
