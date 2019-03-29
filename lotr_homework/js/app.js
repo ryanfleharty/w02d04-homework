@@ -70,7 +70,7 @@ const makeHobbits = () => {
 // ============
 const keepItSecretKeepItSafe = () => {
   $(`body`).append(`<div id="the-ring"/>`)
-console.log($("li").get(0).append(`#the-ring`));
+  $("li").get(0).append(`#the-ring`);
 };
 
 // COMMIT YOUR WORK
@@ -82,7 +82,7 @@ console.log($("li").get(0).append(`#the-ring`));
 const makeBaddies = () => {
 $(`#Mordor`).append(`<ul class = "baddy"/>`)
 for (i = 0; i < baddies.length; i++){
-  $(`.baddy`).append(`<li class = "baddy">${baddies[i]}</li>`);
+  $(`ul.baddy`).append(`<li class = "baddy">${baddies[i]}</li>`);
 };
 };
 
@@ -93,7 +93,8 @@ for (i = 0; i < baddies.length; i++){
 // Chapter 5
 // ============
 const makeBuddies = () => {
-$('#middle-earth').append(`<aside/>`).append(`<ul class = "buddy"/>`);
+$('#middle-earth').append(`<aside/>`)
+$('aside').append(`<ul class = "buddy"/>`);
   // 1. create an aside tag and append it to middle-earth below mordor
 for (i = 0; i < buddies.length; i++){
   $(`ul.buddy`).append(`<li class = "buddy">${buddies[i]}</li>`);
@@ -108,10 +109,6 @@ for (i = 0; i < buddies.length; i++){
 // ============
 const leaveTheShire = () => {
 $(`ul.hobbit`).appendTo(`#Rivendell`)
-  // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
-
-  // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
-
 };
 
 // COMMIT YOUR WORK
@@ -121,11 +118,7 @@ $(`ul.hobbit`).appendTo(`#Rivendell`)
 // Chapter 7
 // ============
 const beautifulStranger = () => {
-
-  // 1. change the buddy 'Strider' textnode to "Aragorn"
-
-  // hint: You can get a list of elements by tag name, such as 'aside'
-
+$('li.buddy').eq(3).replaceWith(`<li class="buddy">Aragorn</li>`);
 };
 
 // COMMIT YOUR WORK
