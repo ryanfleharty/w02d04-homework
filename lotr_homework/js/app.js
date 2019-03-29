@@ -162,7 +162,13 @@ const leaveTheShire = () => {
 const beautifulStranger = () => {
 
   // 1. change the buddy 'Strider' textnode to "Aragorn"
-
+  $('.buddy').each(function(){
+    console.log(this.innerText);
+  if (this.innerText === "strider") {
+    console.log("Inside strider!!");
+    $(this).text("Aragorn");
+  }
+  })
   // hint: You can get a list of elements by tag name, such as 'aside'
 
 };
@@ -180,10 +186,12 @@ const forgeTheFellowShip = () => {
   // 2. add an h1 with the text 'The Fellowship' to this new div
 
   // 3. append the fellowship to middle-earth
-
+  $('#middle-earth').append(`<div id="the-fellowship"><h1>The Fellowship</h1></div>`)
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
-
+  $('#Rivendell ul').detach().appendTo('#the-fellowship')
+  $('aside ul').detach().appendTo('#the-fellowship')
 };
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
