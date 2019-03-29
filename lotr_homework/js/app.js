@@ -237,7 +237,8 @@ const itsDangerousToGoAlone = () => {
   $('#Mordor').append($("li:contains('Frodo')"));
   $('#Mordor').append($("li:contains('Sam')"));
   // 2. add a div with an id of 'mount-doom' to Mordor
-  $('#Mordor').append('<div>mount-doom');
+  $mountDoomDiv = $('<div/>', { id: 'mount-doom' });
+  $('#Mordor').append($mountDoomDiv);
 };
 
 // COMMIT YOUR WORK
@@ -250,12 +251,12 @@ const weWantsIt = () => {
 
   // 1. Create a div with an id of 'gollum' and add it to Mordor
   const $divGollum = $('<div/>', { class: 'gollum' });
-   $('#Mordor').append($divGollum);
+  $('#Mordor').append($divGollum);
   // 2. Move the ring from Frodo and give it to Gollum
   const $divRing = $('#the-ring');
   $divGollum.append($divRing);
   // 3. Move Gollum into Mount Doom
-  $("div:contains('moount-doom')").append($divGollum);
+  $('#mount-doom').append($('.gollum'));
 
 };
 
@@ -268,11 +269,11 @@ const weWantsIt = () => {
 const thereAndBackAgain = () => {
 
   // 1. remove Gollum and the Ring from the DOM
-
+  $('.gollum').remove();
   // 2. remove all the baddies from the DOM
-
+  $('.baddy').remove();
   // 3. Move all the hobbits back to the shire
-
+  $('#The-Shire').append($('.hobbit'));
 };
 
 // COMMIT YOUR WORK
