@@ -65,7 +65,7 @@ const makeMiddleEarth = () => {
 	for (let i = 0; i < lands.length; i++)
 	{
 		const $article = $("<article/>");
-		$article.id = lands[i];
+		$article.attr("id", lands[i]);
 		const $h1 = $("<h1/>");
 		$h1.html(lands[i]);
 		$article.append($h1);
@@ -85,12 +85,24 @@ const makeHobbits = () => {
 	console.log('Make hobbits');
 
 	// 1. display an unordered list of the hobbits in the shire.
+	const $ul = $("<ul/>");
+
+	for (let i = 0; i < hobbits.length; i++)
+	{
+		//Add hobbits to the ul
+		const $li = $(`<li>${hobbits[i]}</li>`);
+		$li.addClass("hobbit");
+		$ul.append($li);
+	}
 
 	// 2. give each hobbit a class of "hobbit"
+	//$ul.addClass("hobbit");
 
 	// hint: create a 'ul' outside the loop upon which to append the 'li's
 
 	// hint: get 'The-Shire' by using its id
+
+	$("#The-Shire").append($ul);
 
 };
 
