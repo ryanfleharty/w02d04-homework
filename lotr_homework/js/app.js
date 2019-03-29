@@ -57,11 +57,11 @@ for (let i = 0; i < lands.length; i++){
 
 
   //   3a. creates an article tag (there should be one for each land when the loop is done)
-const $article = $("<article id='the-shire'></article>");
-const $article = $("<article id='rivendell'></article>");
-const $article = $("<article id='mordor'></article>");
-  //   3b. gives each land article an `id` tag of the corresponding land name
 
+$('#middle-earth').append(`<article id="${lands[i]}"><h1>${lands[i]}</h1></article>`)
+
+  //   3b. gives each land article an `id` tag of the corresponding land name
+console.log(document)
   //   3c. includes an h1 with the name of the land inside each land article
 
   //   3d. appends each land to the middle-earth section
@@ -80,13 +80,22 @@ const makeHobbits = () => {
 
   // 1. display an unordered list of the hobbits in the shire.
 
+  $('#The-Shire').append(`<ul></ul>`)
+  for(let i = 0; i < hobbits.length; i++){
+    $('ul').append('<li class="hobbits">${hobbits[i]}</li>')
+      //WHY WONT THE INDEX SHOW UP               
+  }
+
+}
+
+
   // 2. give each hobbit a class of "hobbit"
 
   // hint: create a 'ul' outside the loop upon which to append the 'li's
 
   // hint: get 'The-Shire' by using its id
 
-};
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
