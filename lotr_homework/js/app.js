@@ -56,9 +56,9 @@ const makeMiddleEarth = () => {
 
 const makeHobbits = () => {
   console.log('Make hobbits');
-  $(`#The-Shire`).append(`<ul/>`);
+  $(`#The-Shire`).append(`<ul class = "hobbit"/>`);
   for (i = 0; i < hobbits.length; i++){
-    $(`ul`).append(`<li>${hobbits[i]}</li>`);
+    $(`ul`).append(`<li class= "hobbit">${hobbits[i]}</li>`);
   };
 };
 
@@ -80,12 +80,10 @@ console.log($("li").get(0).append(`#the-ring`));
 // Chapter 4
 // ============
 const makeBaddies = () => {
-
-  // 1. display an unordered list of baddies in Mordor
-
-  // 2. give each of the baddies a class of "baddy"
-
-  // 3. remember to append them to Mordor
+$(`#Mordor`).append(`<ul class = "baddy"/>`)
+for (i = 0; i < baddies.length; i++){
+  $(`.baddy`).append(`<li class = "baddy">${baddies[i]}</li>`);
+};
 };
 
 // COMMIT YOUR WORK
