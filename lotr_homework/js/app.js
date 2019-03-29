@@ -238,14 +238,17 @@ $('.baddy:nth-of-type(3)').remove();
 const itsDangerousToGoAlone = () => {
 
   // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
-$('.Frodo').detach()
-$('#Mordor').append('.Frodo');
-$('.Samwise').detach()
-$('#Mordor').append('.Samwise');
+$('#Mordor').append('<ul class="rogues"></ul>')
+let frodo = $('.Frodo');
+let sam = $('.Samwise');
+$(frodo).detach()
+$('.rogues').append(frodo);
+$(sam).detach()
+$('.rogues').append(sam);
 
   // 2. add a div with an id of 'mount-doom' to Mordor
 $('#Mordor').append('<div/>');
-$('#Mordor div').attr('id', 'mount-doom')
+$('#Mordor div:last-of-type').attr('id', 'mount-doom')
 };
 
 // COMMIT YOUR WORK
@@ -257,11 +260,16 @@ $('#Mordor div').attr('id', 'mount-doom')
 const weWantsIt = () => {
 
   // 1. Create a div with an id of 'gollum' and add it to Mordor
-
+$('#Mordor').append('<div id="gollum"></div>');
   // 2. Move the ring from Frodo and give it to Gollum
-
+let theRing = $('.Frodo div');
+$(theRing).detach();
+$('#gollum').append(theRing);
   // 3. Move Gollum into Mount Doom
-
+let creature = $('#gollum');
+$(creature).detach();
+$('#mount-doom').append(creature);
+$('#gollum div').attr('id', 'the-ring');
 };
 
 // COMMIT YOUR WORK
