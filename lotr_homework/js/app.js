@@ -220,8 +220,8 @@ const forgeTheFellowShip = () => {
 const theBalrog = () => {
 
   // 1. change the 'Gandalf' textNode to 'Gandalf the White'
-$('.buddies').eq(0).text('Gandalf the White');
-$('.buddies').eq(0).addClass("the-white");
+  $('.buddy').eq(0).text("Gandalf the White");
+  $('.buddy').eq(0).addClass("the-white");
 
   // 2. add a class "the-white" to this element
 
@@ -240,9 +240,9 @@ const hornOfGondor = () => {
   // 1. create a pop-up alert that the horn of gondor has been blown
   window.alert('The horn of gondor has been blown!');
 
-  $('.buddy').eq(4).css('text-decoration: line-through');
+  $('.buddy').eq(4).css('text-decoration', 'line-through');
 
-  $('.baddies').eq(2).remove();
+  $('.baddy').eq(2).remove();
 
   // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
 
@@ -259,6 +259,9 @@ const hornOfGondor = () => {
 const itsDangerousToGoAlone = () => {
 
   // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
+  $('.hobbits').eq(0).append('#Mordor');
+  $('.hobbits').eq(1).append('#Mordor');
+  $('#Mordor').append('<div id="mount-doom"></div>');
 
   // 2. add a div with an id of 'mount-doom' to Mordor
 
