@@ -58,9 +58,8 @@ const makeMiddleEarth = () => {
        //   3d. appends each land to the middle-earth section
      $('#middle-earth').append('<a id = "' + lands[i] + '"</a>' + lands[i] + '</a>');
        //   3c. includes an h1 with the name of the land inside each land article
-      $('a').append('<h1>' + lands[i] + '</h1>');
+      $('#'+ lands[i]).append('<h1>' + lands[i] + '</h1>');
   }
-
 };
 
 // COMMIT YOUR WORK
@@ -74,13 +73,16 @@ const makeHobbits = () => {
   console.log('Make hobbits');
 
   // 1. display an unordered list of the hobbits in the shire.
-
+  $('#The-Shire').append('<ul id = hobbitFriends></ul>');
+  for(let i = 0; i < hobbits.length; i++){
+    $('#hobbitFriends').append('<li class = hobbit>' + hobbits[i] + '</li>')
+  }
+  
   // 2. give each hobbit a class of "hobbit"
 
   // hint: create a 'ul' outside the loop upon which to append the 'li's
 
   // hint: get 'The-Shire' by using its id
-
 };
 
 // COMMIT YOUR WORK
