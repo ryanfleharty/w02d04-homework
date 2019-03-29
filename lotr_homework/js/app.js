@@ -167,11 +167,9 @@ const hornOfGondor = () => {
 // Chapter 11
 // ============
 const itsDangerousToGoAlone = () => {
-
-  // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
-
-  // 2. add a div with an id of 'mount-doom' to Mordor
-
+  $('li.hobbit').eq(0).appendTo('#Mordor');
+  $('li.hobbit').eq(1).appendTo('#Mordor');
+  $('#Mordor').wrap('<div id = "mount-doom"/>');
 };
 
 // COMMIT YOUR WORK
