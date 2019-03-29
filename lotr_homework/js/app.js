@@ -47,25 +47,22 @@ const makeMiddleEarth = () => {
   console.log("Trying to make middle earth.");
 
   // 1. create a section tag with an id of middle-earth
-const $section = ('<section id="middle-earth/>');
 
   // 2. append the section to the body of the DOM.
-  $('body').append($section);
+  $('body').append("<section id='middle-earth'></section>");
 
   // 3. use a for loop to iterate over the lands array that does the following:
   for (let i = 0; i < lands.length; i++){
-
+$('#middle-earth').append('<article id ="' + lands[i] + '"</article>')
   //   3a. creates an article tag (there should be one for each land when the loop is done)
-  const $article = $('<article>');
 
   //   3b. gives each land article an `id` tag of the corresponding land name
-  $($article).eq(0).attr('id', lands[i]);
 
   //   3c. includes an h1 with the name of the land inside each land article
-  $($article).append('<h1/>', lands[i]);
+  $('<article>').append('<h1/>', lands[i]);
 
   //   3d. appends each land to the middle-earth section
-  $('#middle-earth').append($article);
+ 
 }
 
 
@@ -82,21 +79,13 @@ const makeHobbits = () => {
   console.log('Make hobbits');
 
   // 1. display an unordered list of the hobbits in the shire.
-  const $ul = ('<ul class="hobbits"/>');
-  $('#The-Shire').append($ul);
+  $('#The-Shire').append('<ul></ul>');
 
 
   for (let i = 0; i < hobbits.length; i++){
-   const $li = ('<li class="hobbit"/>');
-
-   //not sure if this is correct. I can't see where it is or isn't adding this text.
-   $($ul).append($li + hobbits[i]);
-   $('#The-Shire').append($li);
-
-   console.log($li);
+    $('ul').append(('<li class = "hobbit">' + hobbits[i] + '</li>'))
 
     // 2. give each hobbit a class of "hobbit"
-    // $('li').addClass('hobbit');
 
   // hint: create a 'ul' outside the loop upon which to append the 'li's
 
@@ -136,7 +125,7 @@ $('li').eq(0).append($div);
 const makeBaddies = () => {
 
   // 1. display an unordered list of baddies in Mordor
-  const $ul2 = ('<ul class="baddy"/>');
+  const $ul2 = ('<ul/>');
   $('#Mordor').append($ul2);
 
   for (let i = 0; i < baddies.length; i++){
@@ -161,7 +150,7 @@ const makeBaddies = () => {
 const makeBuddies = () => {
 
   // 1. create an aside tag and append it to middle-earth below mordor
-const $aside = $('<aside class="buddy"/>');
+const $aside = $('<aside/>');
 $('#middle-earth').append($aside);
 
   // 2. display an unordered list of buddies in the aside
@@ -189,7 +178,8 @@ $('#middle-earth').append($aside);
 const leaveTheShire = () => {
 
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
-$("#The-Shire").children().append("#Rivendell");
+const $moveRivendell = $("#The-Shire").children().append("#Rivendell");
+console.log($moveRivendell);
 
 // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
 
@@ -204,6 +194,11 @@ $("#The-Shire").children().append("#Rivendell");
 const beautifulStranger = () => {
 
   // 1. change the buddy 'Strider' textnode to "Aragorn"
+  //Not working. I'm honestly very confused and don't know if I'm doing any of these things correctly. I'm not seeing anything on my console/in browser.
+
+  const $newAside = $('<aside>').eq(3).append('Aragorn');
+  console.log($newAside);
+
 
   // hint: You can get a list of elements by tag name, such as 'aside'
 
