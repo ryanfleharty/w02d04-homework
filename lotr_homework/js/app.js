@@ -136,7 +136,7 @@ $('li').eq(0).append($div);
 const makeBaddies = () => {
 
   // 1. display an unordered list of baddies in Mordor
-  const $ul2 = ('<ul/>');
+  const $ul2 = ('<ul class="baddy"/>');
   $('#Mordor').append($ul2);
 
   for (let i = 0; i < baddies.length; i++){
@@ -161,7 +161,7 @@ const makeBaddies = () => {
 const makeBuddies = () => {
 
   // 1. create an aside tag and append it to middle-earth below mordor
-const $aside = $('<aside/>');
+const $aside = $('<aside class="buddy"/>');
 $('#middle-earth').append($aside);
 
   // 2. display an unordered list of buddies in the aside
@@ -189,8 +189,9 @@ $('#middle-earth').append($aside);
 const leaveTheShire = () => {
 
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
+$("#The-Shire").children().append("#Rivendell");
 
-  // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
+// hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
 
 };
 
