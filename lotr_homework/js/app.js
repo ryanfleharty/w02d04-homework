@@ -128,15 +128,10 @@ $('li.buddy').eq(3).replaceWith(`<li class="buddy">Aragorn</li>`);
 // Chapter 8
 // ============
 const forgeTheFellowShip = () => {
-
-  // 1. create a new div with an id 'the-fellowship'
-
-  // 2. add an h1 with the text 'The Fellowship' to this new div
-
-  // 3. append the fellowship to middle-earth
-
-  // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
-
+  $(`#middle-earth`).append(`<div id = "the-fellowship"/>`);
+  $(`#the-fellowship`).append(`<h1>The Fellowship</h1>`);
+  $(`ul.buddy`).appendTo('#the-fellowship');
+  $(`ul.hobbit`).appendTo('#the-fellowship');
 };
 
 // COMMIT YOUR WORK
