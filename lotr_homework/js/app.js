@@ -4,6 +4,13 @@ console.log("---------------")
 // ==============================
 //       Dramatis Personae
 // ==============================
+// jQuery as three steps
+
+//1. pick a thing in HTML to change
+
+//2. decide what to do with it
+
+//3. provide the necessary info in the parentheses
 
 const hobbits = [
   "Frodo Baggins",
@@ -49,9 +56,9 @@ const makeMiddleEarth = () => {
   // 1. create a section tag with an id of middle-earth
 
   // 2. append the section to the body of the DOM.
-
+  $(`body`).append(`<section id="middle-earth"></section>`);
   // 3. use a for loop to iterate over the lands array that does the following:
-
+       for (i = 0; i < lands.length; i++) {
   //   3a. creates an article tag (there should be one for each land when the loop is done)
 
   //   3b. gives each land article an `id` tag of the corresponding land name
@@ -59,8 +66,10 @@ const makeMiddleEarth = () => {
   //   3c. includes an h1 with the name of the land inside each land article
 
   //   3d. appends each land to the middle-earth section
-
+    $('#middle-earth').append(`<article id="${lands[i]}"><h1>${lands[i]}</h1></article>`);
+  }
 };
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
@@ -73,9 +82,11 @@ const makeHobbits = () => {
   console.log('Make hobbits');
 
   // 1. display an unordered list of the hobbits in the shire.
-
+ $('#The-Shire').append('<ul></ul>')
   // 2. give each hobbit a class of "hobbit"
-
+for (i = 0; i < hobbits.length; i++) {
+  $("ul").append(`<li class="hobbit">${hobbits[i]}</li>`);
+}
   // hint: create a 'ul' outside the loop upon which to append the 'li's
 
   // hint: get 'The-Shire' by using its id
@@ -91,7 +102,7 @@ const makeHobbits = () => {
 const keepItSecretKeepItSafe = () => {
 
   // 1. create an empty div with an id of 'the-ring'
-
+   $('li:first').append(`<div id=the-ring></div>`);
   // 2. add the ring as a child of Frodo
 
   // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
@@ -109,9 +120,11 @@ const keepItSecretKeepItSafe = () => {
 const makeBaddies = () => {
 
   // 1. display an unordered list of baddies in Mordor
-
+$('#Mordor').append(`<ul></ul>`)
   // 2. give each of the baddies a class of "baddy"
-
+for (i = 0; i < baddies.length; i++){
+ $('#Mordor ul').append(`li class="baddy">${baddies[i]}</li>`)
+}
   // 3. remember to append them to Mordor
 };
 
@@ -124,11 +137,13 @@ const makeBaddies = () => {
 const makeBuddies = () => {
 
   // 1. create an aside tag and append it to middle-earth below mordor
-
+$("<aside></aside>").insertAfter("#Mordor");
   // 2. display an unordered list of buddies in the aside
-
+$('aside').append('<ul></ul>');
   // 3. give each of the buddies a class of "buddy"
-
+  for (i = 0; i < buddies.length; i++) {
+  $('aside ul').append(`<li class="buddy">${buddies[i]}</li>`)
+  }
 };
 
 // COMMIT YOUR WORK
@@ -140,7 +155,7 @@ const makeBuddies = () => {
 const leaveTheShire = () => {
 
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
-
+$('#The-Shire ul').detach().appendTo('#Rivendell');
   // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
 
 };
@@ -154,9 +169,12 @@ const leaveTheShire = () => {
 const beautifulStranger = () => {
 
   // 1. change the buddy 'Strider' textnode to "Aragorn"
-
+$('.buddy').each(function(){ 
   // hint: You can get a list of elements by tag name, such as 'aside'
-
+  if(this.innerText === "strider") {
+    $(this).text('Aragorn');
+  }
+})
 };
 
 // COMMIT YOUR WORK
@@ -168,13 +186,14 @@ const beautifulStranger = () => {
 const forgeTheFellowShip = () => {
 
   // 1. create a new div with an id 'the-fellowship'
-
+$('#middle-earth').append(`<div id="the-fellowship"><h1>The Fellowshirp</h1></div>`)
   // 2. add an h1 with the text 'The Fellowship' to this new div
 
   // 3. append the fellowship to middle-earth
 
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
-
+  $('#Rivendell ul').detach().appendTo(`#the-fellowship`);
+  $('aside ul').detach().appendTo(`#the-fellowship`)
 };
 
 // COMMIT YOUR WORK
@@ -186,7 +205,13 @@ const forgeTheFellowShip = () => {
 const theBalrog = () => {
 
   // 1. change the 'Gandalf' textNode to 'Gandalf the White'
-
+$('.buddy').each(function(){
+  console.log(this.innterText);
+  if(this.innerText === "gandalf the grey") {
+    $(this).text('Gandalf the white');
+    $(this).addClass("the-white");
+  }
+})
   // 2. add a class "the-white" to this element
 
   // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
@@ -202,11 +227,19 @@ const theBalrog = () => {
 const hornOfGondor = () => {
 
   // 1. create a pop-up alert that the horn of gondor has been blown
-
+alert('the horn of gondor...Boromir!');
   // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
-
+$('.buddy').each(function(){
+  if(this.innerText === "boromir") {
+    $(this).wrap('<del>');
+  }
+})
   // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
-
+$('.baddy').each(function(){
+  if(this.innerText === "the Uruk-hai") {
+    $(this).remove();
+  }
+})
 };
 
 // COMMIT YOUR WORK
@@ -218,9 +251,13 @@ const hornOfGondor = () => {
 const itsDangerousToGoAlone = () => {
 
   // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
-
+$('.hobbit').each(function(){
+  if (this.innerText === "Frodo Baggins" && this.innerText === "Samewise 'Sam' Gamgee") {
+    $(this).detach().appendTo('#Mordor');
+  }
+})
   // 2. add a div with an id of 'mount-doom' to Mordor
-
+$('#Mordor').append('div id="mount-doom"></div>');
 };
 
 // COMMIT YOUR WORK
@@ -232,11 +269,11 @@ const itsDangerousToGoAlone = () => {
 const weWantsIt = () => {
 
   // 1. Create a div with an id of 'gollum' and add it to Mordor
-
+$('#Mordor').append('<div id="gollum"></div>');
   // 2. Move the ring from Frodo and give it to Gollum
-
+$('#the-ring').detach().appendTo('#gollum');
   // 3. Move Gollum into Mount Doom
-
+$('#gollum').detach().appendTo('#mount-doom');
 };
 
 // COMMIT YOUR WORK
@@ -248,11 +285,15 @@ const weWantsIt = () => {
 const thereAndBackAgain = () => {
 
   // 1. remove Gollum and the Ring from the DOM
-
+$('#gollum').remove();
   // 2. remove all the baddies from the DOM
-
+$('.baddy').each(function(){
+  $(this).remove()
+})
   // 3. Move all the hobbits back to the shire
-
+$('.hobbit').each(function(){
+  $(this).detach().appendTo('#The-shire');
+})
 };
 
 // COMMIT YOUR WORK
