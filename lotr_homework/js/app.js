@@ -198,6 +198,10 @@ $('.buddy').eq(3).append('Aragorn');
 const forgeTheFellowShip = () => {
 
   // 1. create a new div with an id 'the-fellowship'
+  $('#middle-earth').append('<div id="the-fellowship"><h1>The Fellowship,</h1></div>');
+  $('#the-fellowship').append('.hobbits');
+  $('#the-fellowship').append('.buddies');
+
 
   // 2. add an h1 with the text 'The Fellowship' to this new div
 
