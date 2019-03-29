@@ -259,12 +259,14 @@ itsDangerousToGoAlone();
 const weWantsIt = () => {
 
   // 1. Create a div with an id of 'gollum' and add it to Mordor
-
+  $('<div id="Gollum"></div>').appendTo('#Mordor');
   // 2. Move the ring from Frodo and give it to Gollum
-
+  $('#theRing').appendTo('#Gollum');
   // 3. Move Gollum into Mount Doom
-
+  $('#Gollum').appendTo('#mount-doom');
 };
+
+weWantsIt();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 12 complete - Gollum is trying to get the ring".
