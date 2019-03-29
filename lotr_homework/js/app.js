@@ -156,9 +156,9 @@ const leaveTheShire = () => {
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
   // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
   let hobbits = $('#The-Shire ul');
-  $(hobbits).detach('#Rivendell');
+  $(hobbits).detach();
   $("#Rivendell").append(hobbits);
-  //$('#The-Shire ul').detach().insertAfter('#Rivendell');
+  
 };
 
 // COMMIT YOUR WORK
@@ -184,13 +184,17 @@ $(theKing).text('Aragorn');
 const forgeTheFellowShip = () => {
 
   // 1. create a new div with an id 'the-fellowship'
-
   // 2. add an h1 with the text 'The Fellowship' to this new div
-
   // 3. append the fellowship to middle-earth
-
+$('#middle-earth').append('<div id="the-fellowship">');
+$('#the-fellowship').append('<h1>The Fellowship</h1>');
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
-
+let hobbits = $('#Rivendell ul');
+$(hobbits).detach();
+$('#the-fellowship').append(hobbits);
+let bestBuds = $('aside ul');
+$(bestBuds).detach();
+$('#the-fellowship').append(bestBuds);
 };
 
 // COMMIT YOUR WORK
