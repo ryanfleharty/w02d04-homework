@@ -144,7 +144,6 @@ for (let i = 0; i < buddies.length; i++){
   $('aside li').attr('class', 'buddy');
   $('aside li:last-child').text(thisBuddy);
 }
-
 };
 
 // COMMIT YOUR WORK
@@ -154,11 +153,12 @@ for (let i = 0; i < buddies.length; i++){
 // Chapter 6
 // ============
 const leaveTheShire = () => {
-
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
-
   // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
-
+  let hobbits = $('#The-Shire ul');
+  $(hobbits).detach('#Rivendell');
+  $("#Rivendell").append(hobbits);
+  //$('#The-Shire ul').detach().insertAfter('#Rivendell');
 };
 
 // COMMIT YOUR WORK
