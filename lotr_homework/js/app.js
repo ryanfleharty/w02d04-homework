@@ -186,18 +186,19 @@ beautifulStranger();
 // ============
 // Chapter 8
 // ============
+
 const forgeTheFellowShip = () => {
 
   // 1. create a new div with an id 'the-fellowship'
-
+  $('<div id="theFellowship"><h1>"The Fellowship"</h1></div>').appendTo("#middle-earth");
   // 2. add an h1 with the text 'The Fellowship' to this new div
-
+  $('#hobbitList').appendTo('#theFellowship');
   // 3. append the fellowship to middle-earth
-
+  $('#buddiesList').appendTo('#theFellowship');
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
 
 };
-
+forgeTheFellowShip();
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
 
