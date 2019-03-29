@@ -142,7 +142,6 @@ const makeBaddies = () => {
   for (let i = 0; i < baddies.length; i++){
     const $li = ('<li class="baddy"/>');
 
-   //not sure if this is correct. I can't see where it is or isn't adding this text.
    $($ul2).append($li + baddies[i]);
    $('#Mordor').append($li);
 
@@ -162,9 +161,21 @@ const makeBaddies = () => {
 const makeBuddies = () => {
 
   // 1. create an aside tag and append it to middle-earth below mordor
+const $aside = $('<aside/>');
+$('#middle-earth').append($aside);
 
   // 2. display an unordered list of buddies in the aside
+  const $ul3 = ('<ul/>');
+  $($aside).append($ul3);
 
+  for (let i = 0; i < buddies.length; i++){
+    const $li = ('<li class="buddy"/>');
+
+   $($ul3).append($li + baddies[i]);
+   $($aside).append($li);
+
+   console.log($li);
+  }
   // 3. give each of the buddies a class of "buddy"
 
 };
