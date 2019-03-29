@@ -204,7 +204,7 @@ const theBalrog = () => {
   // 1. change the 'Gandalf' textNode to 'Gandalf the White'
   $('.buddy').each(function(){
     console.log(this.innerText);
-  if (this.innerText === "gandalf") {
+  if (this.innerText === "gandalf the grey") {
     console.log("Inside gandalf!!");
     $(this).text('Gandalf the White');
     $(this).addClass("the-white");
@@ -225,11 +225,22 @@ const theBalrog = () => {
 const hornOfGondor = () => {
 
   // 1. create a pop-up alert that the horn of gondor has been blown
-
+  alert('Listen...The Horn of Gondor...Boromir!');
   // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
-
+  $('.buddy').each(function(){
+    console.log(this.innerText);
+  if (this.innerText === "boromir") {
+    console.log("Inside boromir!!");
+    $(this).wrap('<del>');
+  }
+  })
   // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
-
+  $('.baddy').each(function(){
+    console.log(this);
+  if (this.innerText === "the uruk-hai") {
+    $(this).remove();
+  }
+  })
 };
 
 // COMMIT YOUR WORK
