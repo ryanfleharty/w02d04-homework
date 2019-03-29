@@ -281,11 +281,16 @@ $('#gollum div').attr('id', 'the-ring');
 const thereAndBackAgain = () => {
 
   // 1. remove Gollum and the Ring from the DOM
-
+$('#gollum').remove();
   // 2. remove all the baddies from the DOM
-
+$('.baddy').remove();
   // 3. Move all the hobbits back to the shire
-
+let rogues = $('.rogues');
+$(rogues).detach();
+$("#The-Shire").append(rogues);
+let otherHobbits = $('#the-fellowship ul:first-of-type');
+$(otherHobbits).detach();
+$('#The-Shire').append(otherHobbits);
 };
 
 // COMMIT YOUR WORK
