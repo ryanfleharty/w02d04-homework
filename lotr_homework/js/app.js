@@ -88,7 +88,11 @@ const makeHobbits = () => {
 
   for (let i = 0; i < hobbits.length; i++){
    const $li = ('<li class="hobbit"/>');
+
+   //not sure if this is correct. I can't see where it is or isn't adding this text.
    $($ul).append($li + hobbits[i]);
+   $('#The-Shire').append($li);
+
    console.log($li);
 
     // 2. give each hobbit a class of "hobbit"
@@ -111,13 +115,16 @@ const makeHobbits = () => {
 const keepItSecretKeepItSafe = () => {
 
   // 1. create an empty div with an id of 'the-ring'
+const $div = $('<div id="the-ring"></div>');
+console.log($div);
 
   // 2. add the ring as a child of Frodo
+$('li').eq(0).append($div);
 
   // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
 
   // when you think you have given Frodo the ring, check in your Elements tab
-
+  // I'm not sure where to see my elements in the Elements tab. Even ones I know I've created by checking with console.log don't show up there.
 };
 
 // COMMIT YOUR WORK
@@ -129,7 +136,18 @@ const keepItSecretKeepItSafe = () => {
 const makeBaddies = () => {
 
   // 1. display an unordered list of baddies in Mordor
+  const $ul2 = ('<ul/>');
+  $('#Mordor').append($ul2);
 
+  for (let i = 0; i < baddies.length; i++){
+    const $li = ('<li class="baddy"/>');
+
+   //not sure if this is correct. I can't see where it is or isn't adding this text.
+   $($ul2).append($li + baddies[i]);
+   $('#Mordor').append($li);
+
+   console.log($li);
+  }
   // 2. give each of the baddies a class of "baddy"
 
   // 3. remember to append them to Mordor
