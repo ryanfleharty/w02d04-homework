@@ -138,8 +138,10 @@ const makeBuddies = () => {
   // 2. display an unordered list of buddies in the aside
 
   // 3. give each of the buddies a class of "buddy"
-
-};
+$('#Mordor').append("<aside class='buddy'></aside>");
+for (i = 0; i < buddies.length; i++) {
+  $('#Mordor').append(`<li class="buddy">${buddies[i]}</li>`);
+}}
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
