@@ -159,7 +159,12 @@ aside {
 aside ul {
   width: 20%;
 }
+.the-white {
+  background-color: white;
+  border: 1px solid gray;
+  opacity: 0.7;
 
+}
 
 
 /*===========================================================*/
