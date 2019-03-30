@@ -96,7 +96,6 @@ const makeHobbits = () => {
 	}
 
 	// 2. give each hobbit a class of "hobbit"
-	//$ul.addClass("hobbit");
 
 	// hint: create a 'ul' outside the loop upon which to append the 'li's
 
@@ -114,15 +113,47 @@ const makeHobbits = () => {
 // ============
 const keepItSecretKeepItSafe = () => {
 
+	console.log("give Frodo the Ring");
+
 	// 1. create an empty div with an id of 'the-ring'
+	const $div = (`<div id="the-ring"></div>`);
 
 	// 2. add the ring as a child of Frodo
+	//$(".hobbit")[0].html('<div/>');
+
+	//console.log($(".hobbit").get(0).text());
+
+	//$frodo = $(".hobbit")[0];
+
+	//$ul=$("ul");
+
+	//frodo = $ul.children();
+	$frodo = $('li.hobbit').first();
+
+	console.log($frodo);
+
+	console.log($frodo.html());
+
+	$frodo.append($div);
+
+
+
+	//JQUERY IS HIGHLY IRRITATING
+	//WHY DOESN'T THIS WORK?!?!?!?!?!?!:
+	//$('.hobbits')[0].append($('<div id="the-ring"></div>'));
+
+
+
+	//$("body").html("<p>test</p>");
+
+	//$(".hobbit")[0].text($(".hobbit")[0].text() + " <div></div>");
 
 	// hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
 
 	// when you think you have given Frodo the ring, check in your Elements tab
 
 };
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
