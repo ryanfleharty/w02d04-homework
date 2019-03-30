@@ -77,15 +77,12 @@ console.log(document)
 const makeHobbits = () => {
 
   console.log('Make hobbits');
-
   // 1. display an unordered list of the hobbits in the shire.
-
   $('#The-Shire').append(`<ul></ul>`)
   for(let i = 0; i < hobbits.length; i++){
-    $('ul').append('<li class="hobbits">${hobbits[i]}</li>')
-      //WHY WONT THE INDEX SHOW UP               
+    $('ul').append(`<li class="hobbits">${hobbits[i]}</li>`)
+      //WHY WONT THE INDEX SHOW UP !!!              
   }
-
 }
 
 
@@ -108,6 +105,7 @@ const keepItSecretKeepItSafe = () => {
   // 1. create an empty div with an id of 'the-ring'
 
   // 2. add the ring as a child of Frodo
+  $('.hobbits').eq(0).append('<div id="the-ring"></div>')
 
   // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
 
@@ -124,13 +122,18 @@ const keepItSecretKeepItSafe = () => {
 const makeBaddies = () => {
 
   // 1. display an unordered list of baddies in Mordor
+ 
+ for (let i = 0; i < baddies.length;i++){
+ 
+  $("#Mordor").append(`<ul><li class='baddy'>${baddies[i]}</li> </ul>`)
+
 
   // 2. give each of the baddies a class of "baddy"
 
   // 3. remember to append them to Mordor
-};
+}};
 
-// COMMIT YOUR WORK
+// COMMIT YOUR WORK <li class="hobbits">${hobbits[i]}</li>
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
 
 // ============
