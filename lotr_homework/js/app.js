@@ -138,25 +138,25 @@ const makeBuddies = () => {
   // 2. display an unordered list of buddies in the aside
 
   // 3. give each of the buddies a class of "buddy"
-$('#middle-earth').append("<aside><ul></ul></aside>")
+$('#middle-earth').append(`<aside><ul class= 'buddies'></ul></aside>`)
 for (i = 0; i < buddies.length; i++) {
-  $('ul').append(`<li class="buddy">${buddies[i]}</li>`);
-  
-    //`<li class="buddy">${buddies[i]}</li>`);
+ $('.buddies').append(`<li class= 'buddy'>${buddies[i]}</li>`)
+ 
 }}
-
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
 
 // ============
 // Chapter 6
-// ============
+// ============S
 const leaveTheShire = () => {
 
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
+let hobbitses = $(".hobbit").detach('#The-Shire')
+$('#Rivendell').append(hobbitses)
 
   // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
-$('.hobbit').detach('#The-Shire').append('#Rivendell').each('ul')
+
 };
 
 // COMMIT YOUR WORK
@@ -168,7 +168,7 @@ $('.hobbit').detach('#The-Shire').append('#Rivendell').each('ul')
 const beautifulStranger = () => {
 
   // 1. change the buddy 'Strider' textnode to "Aragorn"
-  $('aside').children('ul').find('li').text('Aragorn')
+
   // hint: You can get a list of elements by tag name, such as 'aside'
 
 };
