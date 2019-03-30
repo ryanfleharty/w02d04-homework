@@ -130,9 +130,9 @@ const keepItSecretKeepItSafe = () => {
 	//frodo = $ul.children();
 	$frodo = $('li.hobbit').first();
 
-	console.log($frodo);
+	//console.log($frodo);
 
-	console.log($frodo.html());
+	//console.log($frodo.html());
 
 	$frodo.append($div);
 
@@ -164,10 +164,22 @@ const keepItSecretKeepItSafe = () => {
 const makeBaddies = () => {
 
 	// 1. display an unordered list of baddies in Mordor
+	const $ul = $("<ul/>");
+
+	for (let i = 0; i < baddies.length; i++)
+	{
+		//Add hobbits to the ul
+		const $li = $(`<li>${baddies[i]}</li>`);
+		$li.addClass("baddy");
+		$ul.append($li);
+	}
+
 
 	// 2. give each of the baddies a class of "baddy"
 
 	// 3. remember to append them to Mordor
+
+	$('#Mordor').append($ul);
 };
 
 // COMMIT YOUR WORK
