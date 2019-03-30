@@ -47,7 +47,7 @@ const makeMiddleEarth = () => {
 	console.log("Trying to make middle earth.");
 
 	// 1. create a section tag with an id of middle-earth
-	const $section = $("<section/>");
+	const $section = $(`<section id="middle-earth"></section>`);
 
 	// 2. append the section to the body of the DOM.
 	$("body").append($section);
@@ -192,7 +192,21 @@ const makeBuddies = () => {
 
 	// 1. create an aside tag and append it to middle-earth below mordor
 
+	$aside = $("<aside></aside>");
+	$("#middle-earth").append($aside);
+
 	// 2. display an unordered list of buddies in the aside
+	const $ul = $("<ul/>");
+
+	for (let i = 0; i < buddies.length; i++)
+	{
+		//Add hobbits to the ul
+		const $li = $(`<li>${buddies[i]}</li>`);
+		$li.addClass("buddy");
+		$ul.append($li);
+	}
+
+	$aside.append($ul);
 
 	// 3. give each of the buddies a class of "buddy"
 
