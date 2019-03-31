@@ -128,7 +128,7 @@ const keepItSecretKeepItSafe = () => {
 	//$ul=$("ul");
 
 	//frodo = $ul.children();
-	$frodo = $('li.hobbit').first();
+	const $frodo = $('li.hobbit').first();
 
 	//console.log($frodo);
 
@@ -163,6 +163,8 @@ const keepItSecretKeepItSafe = () => {
 // ============
 const makeBaddies = () => {
 
+	console.log("Make baddies");
+
 	// 1. display an unordered list of baddies in Mordor
 	const $ul = $("<ul/>");
 
@@ -190,9 +192,11 @@ const makeBaddies = () => {
 // ============
 const makeBuddies = () => {
 
+	console.log("Make buddies");
+
 	// 1. create an aside tag and append it to middle-earth below mordor
 
-	$aside = $("<aside></aside>");
+	const $aside = $("<aside></aside>");
 	$("#middle-earth").append($aside);
 
 	// 2. display an unordered list of buddies in the aside
@@ -220,8 +224,10 @@ const makeBuddies = () => {
 // ============
 const leaveTheShire = () => {
 
+	console.log("Leave the Shire");
+
 	// 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
-	$ul = $('.hobbit').parent();
+	const $ul = $('.hobbit').parent();
 	//console.log($ul);
 	// hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
 
@@ -239,6 +245,8 @@ const leaveTheShire = () => {
 // Chapter 7
 // ============
 const beautifulStranger = () => {
+
+	console.log("Change Strider to Aragorn");
 
 	// 1. change the buddy 'Strider' textnode to "Aragorn"
 
@@ -258,13 +266,25 @@ const beautifulStranger = () => {
 // ============
 const forgeTheFellowShip = () => {
 
+	console.log("Forge the Fellowship");
+
 	// 1. create a new div with an id 'the-fellowship'
+
+	const $div = $(`<div id="the-fellowship"><h1>The Fellowship</h1></div>`);
 
 	// 2. add an h1 with the text 'The Fellowship' to this new div
 
 	// 3. append the fellowship to middle-earth
 
+	$('#middle-earth').append($div);
+
 	// 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
+
+	const $ul1 = $('.hobbit').parent();
+	const $ul2 = $('.buddy').parent();
+
+	$('#the-fellowship').append($ul1);
+	$('#the-fellowship').append($ul2);
 
 };
 
@@ -276,12 +296,19 @@ const forgeTheFellowShip = () => {
 // ============
 const theBalrog = () => {
 
+	console.log("The Balrog");
+
 	// 1. change the 'Gandalf' textNode to 'Gandalf the White'
+
+	$gandalf = $("li.buddy").first();
+	$gandalf.html("Gandalf the White");
 
 	// 2. add a class "the-white" to this element
 
-	// 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
+	$gandalf.addClass("the-white");
 
+	// 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
+	//done - see style.css
 };
 
 // COMMIT YOUR WORK
