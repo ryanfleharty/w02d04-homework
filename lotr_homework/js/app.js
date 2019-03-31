@@ -140,14 +140,15 @@ const makeBaddies = () => {
 // Chapter 5
 // ============
 const makeBuddies = () => {
-  $("#Mordor").append('<aside><</aside>')
+$("#Mordor").append('<aside></aside>')
   // 1. create an aside tag and append it to middle-earth below mordor
 
-  for (let i = 0; i < buddies.length;i++){
-    $("aside").append(`<ul><li class="buddy"><${buddies[i]}</li></ul>`)
-  // 2. display an unordered list of buddies in the aside
+ for (let i = 0; i < buddies.length;i++){
+  $("aside").append(`<li class="buddy">${buddies[i]}</li>`)
+  //   $(".buddy").append(buddies[i])
+  // // 2. display an unordered list of buddies in the aside
 
-  // 3. give each of the buddies a class of "buddy"
+  // // 3. give each of the buddies a class of "buddy"
 
 }};
 
@@ -178,7 +179,7 @@ $("#Rivendell").append(hobbits)
 const beautifulStranger = () => {
 
   // 1. change the buddy 'Strider' textnode to "Aragorn"
-
+$("aside").children("li:nth-child(4)").text("Aragorn")
   // hint: You can get a list of elements by tag name, such as 'aside'
 
 };
