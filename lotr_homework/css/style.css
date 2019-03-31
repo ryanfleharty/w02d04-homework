@@ -151,6 +151,14 @@ ul {
   width: inherit;
 }
 
+.the-white
+{
+  background: white;
+  border-color: grey;
+  border-width: 3px;
+  border-style: solid;
+}
+
 aside {
   display: flex;
   justify-content: flex-end;
