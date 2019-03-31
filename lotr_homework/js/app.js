@@ -319,6 +319,8 @@ const theBalrog = () => {
 // ============
 const hornOfGondor = () => {
 
+	console.log("Horn of Gondor");
+
 	// 1. create a pop-up alert that the horn of gondor has been blown
 
 	alert("The Horn of Gondor sounds!");
@@ -342,6 +344,8 @@ const hornOfGondor = () => {
 // ============
 const itsDangerousToGoAlone = () => {
 
+	console.log("Frodo and Sam go to Mordor");
+
 	// 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
 
 	const $frodo = $("li.hobbit:nth-child(1)");
@@ -363,6 +367,8 @@ const itsDangerousToGoAlone = () => {
 // Chapter 12
 // ============
 const weWantsIt = () => {
+
+	console.log("Gollum gets his prize and dies");
 
 	// 1. Create a div with an id of 'gollum' and add it to Mordor
 
@@ -386,6 +392,8 @@ const weWantsIt = () => {
 // Chapter 13
 // ============
 const thereAndBackAgain = () => {
+
+	console.log("There and back again");
 
 	// 1. remove Gollum and the Ring from the DOM
 
