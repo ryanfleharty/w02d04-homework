@@ -181,7 +181,7 @@ const beautifulStranger = () => {
   // 1. change the buddy 'Strider' textnode to "Aragorn"
 $("aside").children("li:nth-child(4)").text("Aragorn")
   // hint: You can get a list of elements by tag name, such as 'aside'
-
+//WOW THAT WAS HARDish
 };
 
 // COMMIT YOUR WORK
@@ -193,15 +193,22 @@ $("aside").children("li:nth-child(4)").text("Aragorn")
 const forgeTheFellowShip = () => {
 
   // 1. create a new div with an id 'the-fellowship'
-
+ 
   // 2. add an h1 with the text 'The Fellowship' to this new div
 
   // 3. append the fellowship to middle-earth
-
+$("#middle-earth").append("<div id='the-fellowship'><h1>The FellowShip</h1></div>")
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
+//$(h1.hobbits).append("#the-fellowship")
+let hobbits = $('#Rivendell').children()
+$(hobbits).detach()
+$('#the-fellowship').append(hobbits)
 
-};
 
+// let $hobbits = $("#Rivendell").children()
+// $("$hobbits").append("#the-fellowship")
+
+}
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
 
