@@ -222,7 +222,7 @@ const leaveTheShire = () => {
 
 	// 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
 	$ul = $('.hobbit').parent();
-	console.log($ul);
+	//console.log($ul);
 	// hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
 
 	$("#Rivendell").append($ul);
@@ -241,6 +241,10 @@ const leaveTheShire = () => {
 const beautifulStranger = () => {
 
 	// 1. change the buddy 'Strider' textnode to "Aragorn"
+
+	//console.log($("aside ul li:nth-child(4)").html());
+
+	$("aside ul li:nth-child(4)").html("Aragorn");
 
 	// hint: You can get a list of elements by tag name, such as 'aside'
 
