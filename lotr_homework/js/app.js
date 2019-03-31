@@ -300,7 +300,7 @@ const theBalrog = () => {
 
 	// 1. change the 'Gandalf' textNode to 'Gandalf the White'
 
-	$gandalf = $("li.buddy").first();
+	const $gandalf = $("li.buddy").first();
 	$gandalf.html("Gandalf the White");
 
 	// 2. add a class "the-white" to this element
@@ -344,7 +344,15 @@ const itsDangerousToGoAlone = () => {
 
 	// 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
 
+	const $frodo = $("li.hobbit:nth-child(1)");
+	const $sam = $("li.hobbit:nth-child(2)");
+	$("#Mordor").append($frodo);
+	$("#Mordor").append($sam);
+
 	// 2. add a div with an id of 'mount-doom' to Mordor
+
+	const $div = $(`<div id="mount-doom"></div>`);
+	$("#Mordor").append($div);
 
 };
 
