@@ -321,9 +321,16 @@ const hornOfGondor = () => {
 
 	// 1. create a pop-up alert that the horn of gondor has been blown
 
+	alert("The Horn of Gondor sounds!");
+
 	// 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
 
+	$("li.buddy:nth-child(5)").css("text-decoration", "line-through");
+
 	// 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
+
+	$("li.baddy:nth-child(3)").remove();
+	//how exactly was that supposed to be tricky? Am I missing something?
 
 };
 
