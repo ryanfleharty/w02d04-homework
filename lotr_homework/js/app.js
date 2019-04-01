@@ -47,12 +47,11 @@ const makeMiddleEarth = () => {
   console.log("Trying to make middle earth.");
 
   // 1. create a section tag with an id of middle-earth
+$("body").append('<section id= middle-earth></section>');
 
   // 2. append the section to the body of the DOM.
 
-  // 3. use a for loop to iterate over the lands array that does the following:
-
-  //   3a. creates an article tag (there should be one for each land when the loop is done)
+  // 3. use a for loop to iterate over the lands   //   3a. creates an article tag (there should be one for each land when the loop is done)
 
   //   3b. gives each land article an `id` tag of the corresponding land name
 
@@ -73,7 +72,17 @@ const makeHobbits = () => {
   console.log('Make hobbits');
 
   // 1. display an unordered list of the hobbits in the shire.
-
+// const hobbits = () => 
+//   $('').
+const hobbits = () => [{
+frodo: $('#frodo').appendto('ul'),
+sam: $('#sam').appendto('ul'),
+merry: $('#merry').appendto('ul'),
+pippin: $('#pippin').appendto('ul'),
+}]
+console.log('hobbits have been created.')
+$('shire').append('<ul/>');
+  console.log('the hobbits have entered the shire.')
   // 2. give each hobbit a class of "hobbit"
 
   // hint: create a 'ul' outside the loop upon which to append the 'li's
@@ -91,9 +100,10 @@ const makeHobbits = () => {
 const keepItSecretKeepItSafe = () => {
 
   // 1. create an empty div with an id of 'the-ring'
+const $ring = $('<div/>');
 
   // 2. add the ring as a child of Frodo
-
+$('ring').appendto('.$frodo');
   // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
 
   // when you think you have given Frodo the ring, check in your Elements tab
