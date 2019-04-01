@@ -57,10 +57,10 @@ const makeMiddleEarth = () => {
     $('body').append('<section id="middle-earth"></section>');
 
     for (let i = 0; i < lands.length; i++){
-      $('#middle-earth').append('<article></article>');
       let thisLand = lands[i];
+      $('#middle-earth').append(`<article><h1>${thisLand}</h1></article>`);
       $('article:last-child').attr('id', thisLand);
-      $(thisLand).text(thisLand);
+      //$(thisLand).text(thisLand);
       console.log(thisLand);
     }
 };
