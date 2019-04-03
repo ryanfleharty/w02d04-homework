@@ -279,6 +279,9 @@ $(`#gollum`).appendTo(`#mount-doom`);
 const thereAndBackAgain = () => {
 
   // 1. remove Gollum and the Ring from the DOM
+$(`#gollum`).remove();
+$(`.baddy`).remove();
+$(`.hobbit`).appendTo(`#The-Shire`);
 
   // 2. remove all the baddies from the DOM
 
