@@ -162,9 +162,10 @@ const leaveTheShire = () => {
 
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
 
-let hobbits = $("ul").children(".hobbits")
-$("#Rivendell").append(hobbits)
-
+let hobbits = $("#The-Shire ul")
+console.log(hobbits)
+// $(hobbits).detach('#Rivendell');
+$("#Rivendell").append(hobbits);
 
   // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
 
@@ -193,22 +194,27 @@ $("aside").children("li:nth-child(4)").text("Aragorn")
 const forgeTheFellowShip = () => {
 
   // 1. create a new div with an id 'the-fellowship'
- 
+$("#middle-earth").append("<div id='the-fellowship'></div>")
   // 2. add an h1 with the text 'The Fellowship' to this new div
-
+$("#the-fellowship").append("<h1>The Fellowship</h1>")
   // 3. append the fellowship to middle-earth
-$("#middle-earth").append("<div id='the-fellowship'><h1>The FellowShip</h1></div>")
+$("#middle-earth").append("#the-fellowship")
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
-//$(h1.hobbits).append("#the-fellowship")
-let hobbits = $('#Rivendell').children()
-$(hobbits).detach()
+
+let hobbits = $('#Rivendell li')
+console.log(hobbits)
+
 $('#the-fellowship').append(hobbits)
+let buddies = $("aside li")
+$('#the-fellowship').append(buddies)
+
+}
 
 
 // let $hobbits = $("#Rivendell").children()
 // $("$hobbits").append("#the-fellowship")
 
-}
+
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
 
@@ -218,9 +224,11 @@ $('#the-fellowship').append(hobbits)
 const theBalrog = () => {
 
   // 1. change the 'Gandalf' textNode to 'Gandalf the White'
+  $('#the-fellowship').children('li:nth-child(6)').text("Ganfalf the White")
+
 
   // 2. add a class "the-white" to this element
-
+  $('#the-fellowship').children('li:nth-child(6)').attr("class","the-white")
   // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
 
 };

@@ -28,6 +28,10 @@ html, body {
   width: 100%;
   margin: 0 0 0 0;
 }
+.the-white {
+  background-color: white;
+  border: solid 1px grey;
+}
 
 
 @font-face {
