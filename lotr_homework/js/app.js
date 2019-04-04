@@ -301,11 +301,17 @@ $('#gollum').append($ring);
 const thereAndBackAgain = () => {
 
   // 1. remove Gollum and the Ring from the DOM
+  $('#gollum').remove()
 
   // 2. remove all the baddies from the DOM
-
+$('.baddy').remove()
   // 3. Move all the hobbits back to the shire
+// let hobbits1 = $('#mount-doom li')
+// console.log(hobbits1)
 
+//$(hobbits1).appendTo('#The-Shire')
+$('.hobbits').appendTo('#The-Shire')
+ // $('the-shire').append('aside')
 };
 
 // COMMIT YOUR WORK
