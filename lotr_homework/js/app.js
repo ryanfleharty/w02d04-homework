@@ -148,11 +148,8 @@ const makeBuddies = () => {
 
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
   
-  // for(let i = 0; i < lands.length; i++){
-  //   $('#Rivendell').append(`<li class="hobbits">${hobbits[i]}</li>`);
-  // }
 
-  jQuery(".hobbits").detach().appendTo('#Rivendell')
+ $(".hobbits").detach().appendTo('#Rivendell')
 
   // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
 
@@ -167,9 +164,12 @@ const makeBuddies = () => {
 const beautifulStranger = () => {
 
   // 1. change the buddy 'Strider' textnode to "Aragorn"
-    $("#buddies[3]").replaceWith( "Aragorn" );
-  // hint: You can get a list of elements by tag name, such as 'aside'
+  
+ 
+    $('.buddies').eq(3).replaceWith('<li>"Aragorn"</li>');
 
+  // hint: You can get a list of elements by tag name, such as 'aside'
+  
 };
 
 // COMMIT YOUR WORK
@@ -181,11 +181,13 @@ const beautifulStranger = () => {
 const forgeTheFellowShip = () => {
 
   // 1. create a new div with an id 'the-fellowship'
+     $('<div id="the-fellowship"></div>');
 
-  // 2. add an h1 with the text 'The Fellowship' to this new div
+  // // 2. add an h1 with the text 'The Fellowship' to this new div
+  //     $('#the-fellowship').append(<h1>The Fellowship</h1>);
 
-  // 3. append the fellowship to middle-earth
-
+  // // 3. append the fellowship to middle-earth
+  //     $('#middle-earth').append('#the-fellowship');
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
 
 };
