@@ -166,7 +166,7 @@ const beautifulStranger = () => {
   // 1. change the buddy 'Strider' textnode to "Aragorn"
   
  
-    $('.buddies').eq(3).replaceWith('<li>"Aragorn"</li>');
+    $('.buddies').eq(3).text('Aragorn');
 
   // hint: You can get a list of elements by tag name, such as 'aside'
   
@@ -184,11 +184,17 @@ const forgeTheFellowShip = () => {
      $('<div id="the-fellowship"></div>');
 
   // // 2. add an h1 with the text 'The Fellowship' to this new div
-  //     $('#the-fellowship').append(<h1>The Fellowship</h1>);
+      $('#middle-earth').append(`<div id ="the-fellowship"> <h1>The Fellowship</h1> </div>`);
 
+
+      
   // // 3. append the fellowship to middle-earth
-  //     $('#middle-earth').append('#the-fellowship');
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
+      $('.hobbits').appendTo('#the-fellowship');
+      $('.buddies').appendTo('#the-fellowship');
+      
+      
+
 
 };
 
