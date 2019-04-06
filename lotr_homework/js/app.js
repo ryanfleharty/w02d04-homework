@@ -192,9 +192,6 @@ const forgeTheFellowShip = () => {
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
       $('.hobbits').appendTo('#the-fellowship');
       $('.buddies').appendTo('#the-fellowship');
-      
-      
-
 
 };
 
@@ -207,9 +204,9 @@ const forgeTheFellowShip = () => {
 const theBalrog = () => {
 
   // 1. change the 'Gandalf' textNode to 'Gandalf the White'
-
+  $('.buddies').eq(0).text('Gandalf the White');
   // 2. add a class "the-white" to this element
-
+  $('.buddies').eq(0).addClass('the-white');
   // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
 
 };
