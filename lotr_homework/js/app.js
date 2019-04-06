@@ -88,7 +88,7 @@ const makeHobbits = () => {
 const keepItSecretKeepItSafe = () => {
 
   // 1. create an empty div with an id of 'the-ring'
-      ('<div id="the-ring"></div>')
+     ('<div id="the-ring"></div>')
 
   // 2. add the ring as a child of Frodo
    $('.hobbits').eq(0).append('<div id="the-ring"></div>')
@@ -239,7 +239,7 @@ const itsDangerousToGoAlone = () => {
     $(".hobbits").eq(1).detach().appendTo('#Mordor');
 
   // 2. add a div with an id of 'mount-doom' to Mordor
-  $('#Mordor').append('<div id="mount-doom"></div>')
+  $('#Mordor').prepend('<div id="mount-doom"></div>');
 };
 
 // COMMIT YOUR WORK
@@ -251,11 +251,13 @@ const itsDangerousToGoAlone = () => {
 const weWantsIt = () => {
 
   // 1. Create a div with an id of 'gollum' and add it to Mordor
+  $('#Mordor').prepend('<div id="gollum"></div>');
 
   // 2. Move the ring from Frodo and give it to Gollum
+  $("#the-ring").eq(0).detach().appendTo('#gollum');
 
   // 3. Move Gollum into Mount Doom
-
+  $('#gollum').appendTo('#mount-doom');
 };
 
 // COMMIT YOUR WORK
