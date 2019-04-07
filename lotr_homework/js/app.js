@@ -129,9 +129,9 @@ const makeBaddies = () => {
 const makeBuddies = () => {
 
   // 1. create an aside tag and append it to middle-earth below mordor
-$("#Mordor").append('<aside><ul class= "buds-ul" ></ul></aside>');
+$("#Mordor").append('<aside><ul buds= "buds-ul" ></ul></aside>');
 for (i = 0; i < buddies.length; i++) {
-$('.buds-ul').append(`<li class="buddy">${buddies[i]}</li>`);
+$('[buds=buds-ul]').append(`<li class="buddy">${buddies[i]}</li>`);
   // 2. display an unordered list of buddies in the aside
 
 }
@@ -162,7 +162,7 @@ $('#Rivendell').append($hobbits)
  const beautifulStranger = () => {
 // $('aside, .buddy').text('Aragorn')
   // 1. change the buddy 'Strider' textnode to "Aragorn"
- $('.buds-ul').contents().eq(3).replaceWith('<li>"Aragorn"</li>');
+ $('[buds=buds-ul]').contents().eq(3).replaceWith('<li>"Aragorn"</li>');
   // hint: You can get a list of elements by tag name, such as 'aside'
     
 };
@@ -183,7 +183,7 @@ $('#middle-earth').append('<div id= "the-fellowship"><div>')
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
 $hobbits = $('#Rivendell').children('.hobbit');
   $('#the-fellowship').append($hobbits);
-$buds = $('.buds-ul');
+$buds = $('[buds=buds-ul]');
 $('#the-fellowship').append($buds)
 };
 
@@ -196,7 +196,8 @@ $('#the-fellowship').append($buds)
 const theBalrog = () => {
 
   // 1. change the 'Gandalf' textNode to 'Gandalf the White'
-
+ $('[buds=buds-ul]').text('Gandalf the White')
+ $('[buds=buds-ul]').html('<li class = "the-white">Gandalf the White</li>')
   // 2. add a class "the-white" to this element
 
   // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
