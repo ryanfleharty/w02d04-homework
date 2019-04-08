@@ -234,7 +234,7 @@ $('li.hobbit:nth-child(4)').detach().append('#Mordor')
 $('li.hobbit:nth-child(3)').detach().append("#Mordor")
 
   // 2. add a div with an id of 'mount-doom' to Mordor
-$('#Mordor').append('<div id = "mound-doom"></div>')
+$('#Mordor').append('<div id = "mount-doom"></div>')
 };
 
 // COMMIT YOUR WORK
@@ -246,11 +246,11 @@ $('#Mordor').append('<div id = "mound-doom"></div>')
 const weWantsIt = () => {
 
   // 1. Create a div with an id of 'gollum' and add it to Mordor
-
+$('#Mordor').append('<div id= "gollum"><div id =the-ring></div></div>')
   // 2. Move the ring from Frodo and give it to Gollum
 
   // 3. Move Gollum into Mount Doom
-
+$('#mount-doom').append('#gollum')
 };
 
 // COMMIT YOUR WORK
