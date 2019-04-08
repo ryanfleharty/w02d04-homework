@@ -215,9 +215,9 @@ const hornOfGondor = () => {
   // 1. create a pop-up alert that the horn of gondor has been blown
 alert("the horn of gondor has been blown!")
   // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
-
+$('li.buddy:nth-child(5)').html('<li><strike>Boromir</strike></li>')
   // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
-
+$('li.baddy:nth-child(5)').remove()
 };
 
 // COMMIT YOUR WORK
