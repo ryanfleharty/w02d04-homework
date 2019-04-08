@@ -5,7 +5,10 @@ body {
   text-shadow: 1px 1px white;
   font-weight: 800;
 }
-
+.the-white{
+  border: 1px solid grey;
+  background-color: white;
+}
 h1 {
   font-family: 'Condiment', cursive;
 }
