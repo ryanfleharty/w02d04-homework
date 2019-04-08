@@ -176,10 +176,10 @@ $('#Rivendell').append($hobbits)
 const forgeTheFellowShip = () => {
 
   // 1. create a new div with an id 'the-fellowship'
-$('#middle-earth').append('<div id= "the-fellowship"><div>')
+$('#middle-earth').append('<div id= "the-fellowship"></div>')
 
   // 2. add an h1 with the text 'The Fellowship' to this new div
-  $('#the-fellowship').append('<h1>The Fellowship<h1>')
+  $('#the-fellowship').append('<h1>The Fellowship</h1>')
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
 $hobbits = $('#Rivendell').children('.hobbit');
   $('#the-fellowship').append($hobbits);
@@ -229,9 +229,12 @@ $('li.baddy:nth-child(5)').remove()
 const itsDangerousToGoAlone = () => {
 
   // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
+$('li.hobbit:nth-child(4)').detach().append('#Mordor')
+
+$('li.hobbit:nth-child(3)').detach().append("#Mordor")
 
   // 2. add a div with an id of 'mount-doom' to Mordor
-
+$('#Mordor').append('<div id = "mound-doom"></div>')
 };
 
 // COMMIT YOUR WORK
