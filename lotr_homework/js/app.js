@@ -63,8 +63,6 @@ const makeMiddleEarth = () => {
   //   3d. appends each land to the middle-earth section
 }
 
-makeMiddleEarth();
-
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
 
@@ -77,7 +75,7 @@ const makeHobbits = () => {
   //Okay, so I need to append this to the Shire. It's an unordered list.
   $('#The-Shire').append('<ul id="hobbitList"></ul>');
   for (let i = 0; i < hobbits.length; i++) {
-    $('#hobbitList').append('<li class="hobbitses">"' + hobbits[i] + '"</li>');
+    $('#hobbitList').append('<li class="hobbits">"' + hobbits[i] + '"</li>');
   }
   // 2. give each hobbit a class of "hobbit"
 
@@ -87,7 +85,6 @@ const makeHobbits = () => {
 
 };
 
-makeHobbits();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
@@ -98,7 +95,7 @@ makeHobbits();
 const keepItSecretKeepItSafe = () => {
 
   // 1. create an empty div with an id of 'the-ring'
-  $('.hobbitses').eq(0).append('<div id="theRing"></div>');
+  $('.hobbits').eq(0).append('<div id="the-ring"></div>');
   // 2. add the ring as a child of Frodo
 
   // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
@@ -107,7 +104,6 @@ const keepItSecretKeepItSafe = () => {
 
 };
 
-keepItSecretKeepItSafe();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
@@ -126,7 +122,6 @@ const makeBaddies = () => {
   // 3. remember to append them to Mordor
 };
 
-makeBaddies();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
@@ -146,7 +141,6 @@ const makeBuddies = () => {
   }
 };
 
-makeBuddies();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
@@ -162,7 +156,6 @@ const leaveTheShire = () => {
 
 };
 
-leaveTheShire();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 6 complete - Left the Shire"
@@ -178,7 +171,6 @@ const beautifulStranger = () => {
 
 };
 
-beautifulStranger();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
@@ -198,7 +190,7 @@ const forgeTheFellowShip = () => {
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
 
 };
-forgeTheFellowShip();
+
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
 
@@ -215,7 +207,6 @@ const theBalrog = () => {
 
 };
 
-theBalrog();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 9 complete - Updated Gandalf"
@@ -228,12 +219,11 @@ const hornOfGondor = () => {
   // 1. create a pop-up alert that the horn of gondor has been blown
   alert("The Horn of Gondor has been blown!");
   // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
-  $('#buddieslist').contents().eq(4).css('text-decoration', 'strike-through');
+  $('#buddiesList').contents().eq(4).css('text-decoration', 'strike-through');
   // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
   $('#baddiesList').contents().eq(2).remove();
 };
 
-hornOfGondor();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 10 complete - horn of gandor blew and Boromir is dead"
@@ -249,7 +239,7 @@ const itsDangerousToGoAlone = () => {
   // 2. add a div with an id of 'mount-doom' to Mordor
   $('<div id="mount-doom"></div>').appendTo('#Mordor');
 };
-itsDangerousToGoAlone();
+
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 11 complete - Sam and Frodo are in Mordor and Mount Doom has been created"
 
@@ -261,12 +251,10 @@ const weWantsIt = () => {
   // 1. Create a div with an id of 'gollum' and add it to Mordor
   $('<div id="Gollum"></div>').appendTo('#Mordor');
   // 2. Move the ring from Frodo and give it to Gollum
-  $('#theRing').appendTo('#Gollum');
+  $('#the-ring').appendTo('#Gollum');
   // 3. Move Gollum into Mount Doom
   $('#Gollum').appendTo('#mount-doom');
 };
-
-weWantsIt();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 12 complete - Gollum is trying to get the ring".
@@ -283,7 +271,6 @@ const thereAndBackAgain = () => {
   // 3. Move all the hobbits back to the shire
   $('#hobbitList').appendTo('#The-Shire');
 };
-thereAndBackAgain();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 13 complete -Gollum and the ring are gone, the baddies are done, and the hobbits are back in the shire".
