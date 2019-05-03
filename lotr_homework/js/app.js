@@ -117,11 +117,10 @@ const keepItSecretKeepItSafe = () => {
 const makeBaddies = () => {
 
   // 1. display an unordered list of baddies in Mordor
-$('#Mordor').append("<ul class='baddy'></ul>");
-for (i = 0; i < baddies.length; i++) {
-  $('.baddy').append(`<ul class="baddy">${baddies[i]}</ul>`);
-  console.log('baddies birthed from trees.');
-}
+  for (let i = 0; i < baddies.length; i++) {
+
+    $("#Mordor").append(`<ul><li class='baddy'>${baddies[i]}</li> </ul>`)
+  }
   // 2. give each of the baddies a class of "baddy"
 
   // 3. remember to append them to Mordor
@@ -136,10 +135,9 @@ for (i = 0; i < baddies.length; i++) {
 const makeBuddies = () => {
 
   // 1. create an aside tag and append it to middle-earth below mordor
-  $('#middle-earth').append('<aside/>');
-  $('aside').append('<ul class=buddies>Buddies</ul>');
+  $('#middle-earth').append('<aside></aside>');
   for (let i = 0; i < buddies.length; i++) {
-    $('.buddies').append(`<li class='buddy'>${buddies[i]}</li>`);
+    $("aside").append(`<li class="buddy">${buddies[i]}</li>`);
   }
   // 2. display an unordered list of buddies in the aside
 
@@ -156,8 +154,7 @@ const makeBuddies = () => {
 const leaveTheShire = () => {
 
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
-$(`ul.hobbits`).appendTo(`#Rivendell`);
-console.log('the hobbits journey to rivendell.');
+  $('.hobbit').appendTo('#Rivendell');
   // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
 
 };
@@ -185,10 +182,9 @@ $('li.buddy').eq(3).replaceWith('<li class="buddy">Aaragorn</li>');
 const forgeTheFellowShip = () => {
 
   // 1. create a new div with an id 'the-fellowship'
-$(`#middle-earth`).append(`<div id = "the-fellowship"/>`);
-$(`#the-fellowship`).append(`<h1>The Fellowship</h1>`);
-$(`ul.buddy`).appendTo('#the-fellowship');
-$(`ul.hobbits`).appendTo('#the-fellowship');
+  $('#middle-earth').append('<div id="the-fellowship"><h1>The Fellowship,</h1></div>');
+  $('#the-fellowship').append('.hobbit');
+  $('#the-fellowship').append('.buddy');
   // 2. add an h1 with the text 'The Fellowship' to this new div
 
   // 3. append the fellowship to middle-earth
@@ -277,6 +273,7 @@ const thereAndBackAgain = () => {
   // 1. remove Gollum and the Ring from the DOM
 $(`#gollum`).remove();
 $(`.baddy`).remove();
+$('#mordor').remove();
 $(`.hobbit`).appendTo(`#The-Shire`);
 
   // 2. remove all the baddies from the DOM
