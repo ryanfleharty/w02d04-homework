@@ -257,9 +257,10 @@ $('.buddies').eq(4).css('text-decoration', 'line-through');
 const itsDangerousToGoAlone = () => {
 
   // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
-
+$('#the-fellowship').children().eq(0).appendTo('#Mordor');
+$('#the-fellowship').children().eq(1).appendTo('#Mordor');
   // 2. add a div with an id of 'mount-doom' to Mordor
-
+$('<div> id="mount-doom"></div>').appendTo('#Mordor');
 };
 
 // COMMIT YOUR WORK
