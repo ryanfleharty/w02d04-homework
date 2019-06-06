@@ -117,9 +117,9 @@ const keepItSecretKeepItSafe = () => {
 const makeBaddies = () => {
 
   // 1. display an unordered list of baddies in Mordor
+  $('#Mordor').append('<ul id = orcFilth>baddies</ul>');
   for (let i = 0; i < baddies.length; i++) {
-
-    $("#Mordor").append(`<ul><li class='baddy'>${baddies[i]}</li> </ul>`)
+    $('#orcFilth').append('<li class = baddies>' + baddies[i] + '</li>');
   }
   // 2. give each of the baddies a class of "baddy"
 
@@ -135,10 +135,11 @@ const makeBaddies = () => {
 const makeBuddies = () => {
 
   // 1. create an aside tag and append it to middle-earth below mordor
-  $('#middle-earth').append('<aside></aside>');
-  for (let i = 0; i < buddies.length; i++) {
-    $("aside").append(`<li class="buddy">${buddies[i]}</li>`);
-  }
+  $('#middle-earth').append('<aside id="goodGuys"></aside>');
+  $('#goodGuys').append('<ul id="fellowship"></ul>');
+  for (i = 0; i < buddies.length; i++) {
+    $('#fellowship').append('<li>"' + buddies[i] + '"</li>');
+  };
   // 2. display an unordered list of buddies in the aside
 
   // 3. give each of the buddies a class of "buddy"
@@ -168,7 +169,8 @@ const leaveTheShire = () => {
 const beautifulStranger = () => {
 
   // 1. change the buddy 'Strider' textnode to "Aragorn"
-$('li.buddy').eq(3).replaceWith('<li class="buddy">Aaragorn</li>');
+  const $strider = $("aside li:last-child").prev();
+  $strider.text("Aragorn");
   // hint: You can get a list of elements by tag name, such as 'aside'
 
 };
@@ -182,13 +184,12 @@ $('li.buddy').eq(3).replaceWith('<li class="buddy">Aaragorn</li>');
 const forgeTheFellowShip = () => {
 
   // 1. create a new div with an id 'the-fellowship'
-  $('#middle-earth').append('<div id="the-fellowship"><h1>The Fellowship,</h1></div>');
-  $('#the-fellowship').append('.hobbit');
-  $('#the-fellowship').append('.buddy');
+  $('<div id="theFellowship"><h1>"The Fellowship"</h1></div>').appendTo("#middle-earth");
   // 2. add an h1 with the text 'The Fellowship' to this new div
 
   // 3. append the fellowship to middle-earth
-
+  $('.hobbit').appendTo('#theFellowship');
+  $('#fellowship').appendTo('#theFellowship');
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
 
 };
@@ -202,7 +203,9 @@ const forgeTheFellowShip = () => {
 const theBalrog = () => {
 
   // 1. change the 'Gandalf' textNode to 'Gandalf the White'
-$('li.buddy').eq(0).replaceWith('<li>Gandalf the white</li>')
+  const $gandalf = $("li:contains('Gandalf')");
+  $gandalf.text('Gandalf the White');
+  $gandalf.attr('class', 'the-white');
   // 2. add a class "the-white" to this element
 
   // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
@@ -235,11 +238,10 @@ $('li.buddy').eq(4).css("text-decoration", "line-through");
 const itsDangerousToGoAlone = () => {
 
   // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
-$('li.hobbit').eq(0).appendTo('#Mordor');
-$('li.hobbit').eq(1).appendTo('#Mordor');
-$('#Mordor').wrap('<div id = "mount-doom"/>');
+  $('#theFellowship').contents().eq(1).appendTo('#Mordor');
+  $('#theFellowship').contents().eq(1).appendTo('#Mordor');
   // 2. add a div with an id of 'mount-doom' to Mordor
-
+  $('#Mordor').append('<div id="mount-doom"></div>');
 };
 
 // COMMIT YOUR WORK
